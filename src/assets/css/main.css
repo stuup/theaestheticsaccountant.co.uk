@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@source "../..";
+
+/* Brand tokens, taken from the original WordPress (Justicia) theme overrides */
+@theme {
+  --color-navy: #091c60;        /* logo bar, footer bottom, services strip */
+  --color-navy-deep: #040e30;   /* menu bar, headline ink */
+  --color-blush: #dbbbbe;       /* accent: hovers, icons, footer top */
+  --color-blush-light: #f3e7e8;
+  --color-gold: #d2b472;        /* CTA buttons, hero text-shadow */
+  --color-gold-dark: #b9995a;
+  --color-ink: #000000;         /* headings */
+  --color-body: #666666;        /* body copy */
+  --color-mist: #f7f7f7;
+
+  --font-serif: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --container-grid: 1100px;     /* theme used a 1100px grid */
+}
+
+/* Uppercase, letter-spaced button from the original theme */
+@utility btn {
+  @apply inline-block px-8 py-4 text-[13px] font-semibold uppercase leading-[2em] tracking-[0.2em] transition-colors duration-200 sm:px-10;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-base leading-[1.875] text-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium text-ink;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+}
+
+@layer components {
+  .container-grid {
+    @apply mx-auto w-full max-w-grid px-4 sm:px-6;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-white hover:bg-blush;
+  }
+  .btn-white {
+    @apply btn bg-white text-ink hover:bg-blush hover:text-white;
+  }
+  .btn-navy {
+    @apply btn bg-navy text-white hover:bg-blush;
+  }
+
+  /* Long-form page copy */
+  .prose-aa {
+    @apply prose max-w-none text-body prose-headings:font-serif prose-headings:font-medium prose-headings:text-ink prose-h1:text-4xl prose-h1:leading-tight md:prose-h1:text-5xl prose-h2:text-3xl md:prose-h2:text-4xl prose-a:text-navy prose-a:decoration-blush prose-a:underline-offset-4 hover:prose-a:text-gold-dark prose-strong:text-navy-deep prose-li:marker:text-blush;
+  }
+
+  .hero-text {
+    text-shadow: 2px 2px var(--color-gold);
+  }
+}

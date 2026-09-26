@@ -1,0 +1,34 @@
+{% from "partials/icons.njk" import icon %}
+<footer>
+  <div class="bg-blush">
+    <div class="container-grid grid gap-12 py-16 md:grid-cols-2 md:py-20">
+      <div>
+        <h4 class="mb-5 text-3xl text-white">Contact Us</h4>
+        <address class="not-italic leading-8 text-navy-deep">
+          {% for line in site.address %}{{ line }}<br>{% endfor %}
+          Tel: <a href="{{ site.phoneHref }}" class="hover:text-white">{{ site.phone }}</a><br>
+          Mobile: <a href="{{ site.mobileHref }}" class="hover:text-white">{{ site.mobile }}</a><br>
+          E-mail: <a href="mailto:{{ site.email }}" class="break-words hover:text-white">{{ site.email }}</a>
+        </address>
+        <ul class="mt-4 space-y-1 text-navy-deep">
+          <li><a href="{{ site.booking }}" target="_blank" rel="noopener" class="underline decoration-white/50 underline-offset-4 hover:text-white">Book an appointment with Samantha</a></li>
+          <li><a href="{{ site.newsletter }}" target="_blank" rel="noopener" class="underline decoration-white/50 underline-offset-4 hover:text-white">Subscribe to our mailing list</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mb-5 text-3xl text-white">About Us</h4>
+        <p class="text-navy-deep">{{ site.about }}</p>
+        <div class="mt-6 flex gap-4 text-navy-deep">
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" class="flex size-11 items-center justify-center rounded-full border border-navy-deep/40 transition-colors hover:border-white hover:bg-white hover:text-navy" aria-label="Instagram">{{ icon("instagram") }}</a>
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" class="flex size-11 items-center justify-center rounded-full border border-navy-deep/40 transition-colors hover:border-white hover:bg-white hover:text-navy" aria-label="Facebook">{{ icon("facebook") }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-navy">
+    <div class="container-grid flex flex-col items-center justify-between gap-2 py-6 text-sm text-white/70 sm:flex-row">
+      <p>© Copyright {{ "" | year }} {{ site.name }}™</p>
+      <p>Created in Wolverhampton by <a href="http://www.digitalinspirations.co.uk/" target="_blank" rel="noopener" class="text-white hover:text-blush">Digital Inspirations</a></p>
+    </div>
+  </div>
+</footer>

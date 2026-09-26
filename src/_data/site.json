@@ -1,0 +1,24 @@
+{
+  "name": "The Aesthetics Accountant",
+  "url": "https://www.theaestheticsaccountant.co.uk",
+  "tagline": "Experts in accounting for the Aesthetics industry",
+  "description": "The Aesthetics Accountant™ provides bespoke accountancy, tax and business advisory services for medical aesthetics businesses – no matter how big or small.",
+  "hours": "9:00 - 17:00",
+  "hoursLabel": "Our Opening Hours Mon. - Fri.",
+  "phone": "01405 516306",
+  "phoneHref": "tel:+441405516306",
+  "mobile": "07723 054219",
+  "mobileHref": "tel:+447723054219",
+  "email": "enquiries@theaestheticsaccountant.co.uk",
+  "address": [
+    "F14 – The Aesthetics Accountant, RaisE, Tom Pudding Way,",
+    "Goole, East Riding of Yorkshire, DN14 6BS"
+  ],
+  "booking": "https://calendly.com/the_aesthetics_accountant",
+  "newsletter": "https://mailchi.mp/08e97f5e7032/theaestheticsaccountant",
+  "social": {
+    "instagram": "https://www.instagram.com/the_aesthetics_accountant/",
+    "facebook": "https://www.facebook.com/The-Aesthetics-Accountant-TM-106471737914777"
+  },
+  "about": "The Aesthetics Accountant™ team are experts in this field with a demonstrative client list and sound understanding of the bespoke accountancy practices required to underpin this sector."
+}

@@ -1,0 +1,29 @@
+---
+title: Contact Us
+---
+<div class="not-prose grid gap-12 md:grid-cols-5">
+  <div class="md:col-span-2">
+    <h2 class="mb-4 text-3xl">Get in touch</h2>
+    <address class="space-y-4 not-italic text-body">
+      <p>{% for line in site.address %}{{ line }}<br>{% endfor %}</p>
+      <p>
+        Tel: <a href="{{ site.phoneHref }}" class="text-navy hover:text-gold-dark">{{ site.phone }}</a><br>
+        Mobile: <a href="{{ site.mobileHref }}" class="text-navy hover:text-gold-dark">{{ site.mobile }}</a><br>
+        <a href="mailto:{{ site.email }}" class="break-words text-navy hover:text-gold-dark">{{ site.email }}</a>
+      </p>
+      <p class="text-sm">{{ site.hoursLabel }}: {{ site.hours }}</p>
+    </address>
+    <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn-gold mt-8">Book a consultation</a>
+  </div>
+
+  <form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4 md:col-span-3">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+    {% set field = "w-full border border-gray-200 bg-mist px-5 py-4 text-ink placeholder:text-body/70 focus:border-blush focus:bg-white focus:outline-none focus:ring-2 focus:ring-blush/40" %}
+    <label class="block"><span class="sr-only">Name</span><input type="text" name="name" placeholder="Name" required autocomplete="name" class="{{ field }}"></label>
+    <label class="block"><span class="sr-only">Email</span><input type="email" name="email" placeholder="Email" required autocomplete="email" class="{{ field }}"></label>
+    <label class="block"><span class="sr-only">Phone</span><input type="tel" name="phone" placeholder="Phone" autocomplete="tel" class="{{ field }}"></label>
+    <label class="block"><span class="sr-only">Message</span><textarea name="message" rows="6" placeholder="Message" required class="{{ field }}"></textarea></label>
+    <button type="submit" class="btn-navy cursor-pointer">Send</button>
+  </form>
+</div>

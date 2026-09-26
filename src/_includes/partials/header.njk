@@ -1,0 +1,93 @@
+{% from "partials/icons.njk" import icon %}
+<header class="relative z-40">
+  {# Logo bar #}
+  <div class="bg-navy">
+    <div class="container-grid flex items-center justify-between gap-6 py-5 lg:py-7">
+      <a href="/" class="block shrink-0">
+        <img src="/assets/images/aa-logo-pink.png" alt="{{ site.name }}" width="520" height="72" class="h-auto w-56 sm:w-72 lg:w-[360px]">
+      </a>
+
+      <div class="hidden items-center gap-10 lg:flex">
+        <div class="flex items-center gap-3">
+          {{ icon("clock", "size-6 text-blush") }}
+          <div class="leading-tight">
+            <p class="text-sm font-semibold text-white">{{ site.hours }}</p>
+            <p class="text-xs text-white/60">{{ site.hoursLabel }}</p>
+          </div>
+        </div>
+        <a href="{{ site.phoneHref }}" class="group flex items-center gap-3">
+          {{ icon("phone", "size-6 text-blush") }}
+          <div class="leading-tight">
+            <p class="text-sm font-semibold text-white group-hover:text-blush">{{ site.phone }}</p>
+            <p class="text-xs text-white/60">Call Us For Free Consultation</p>
+          </div>
+        </a>
+        <div class="flex items-center gap-4 text-white">
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" class="hover:text-blush" aria-label="Instagram">{{ icon("instagram") }}</a>
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" class="hover:text-blush" aria-label="Facebook">{{ icon("facebook") }}</a>
+        </div>
+      </div>
+
+      <button type="button" class="text-white lg:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        {{ icon("menu", "size-8") }}
+      </button>
+    </div>
+  </div>
+
+  {# Menu bar (desktop) #}
+  <nav class="hidden bg-navy-deep lg:block" aria-label="Main">
+    <div class="container-grid flex items-center justify-between">
+      <ul class="flex items-center">
+        {% for item in nav %}
+          {% set active = (item.url == page.url) or (item.children and (item.children | selectattr("url", "equalto", page.url) | length)) %}
+          <li class="group relative">
+            {% if item.children %}
+              <button type="button" class="flex items-center gap-1 px-5 py-6 text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-blush {{ 'text-blush' if active else 'text-white' }}" aria-haspopup="true">
+                {{ item.title }} {{ icon("chevron-down", "size-4 opacity-60") }}
+              </button>
+              <ul class="invisible absolute left-0 top-full min-w-64 bg-white py-3 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                {% for child in item.children %}
+                  <li>
+                    <a href="{{ child.url }}" {% if child.external %}target="_blank" rel="noopener"{% endif %}
+                       class="block px-6 py-2 text-sm transition-colors hover:text-blush {{ 'text-blush' if child.url == page.url else 'text-body' }}">{{ child.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <a href="{{ item.url }}" class="block px-5 py-6 text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-blush {{ 'text-blush' if active else 'text-white' }}">{{ item.title }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn-white px-7 py-3">Book a consultation</a>
+    </div>
+  </nav>
+
+  {# Mobile menu #}
+  <nav id="mobile-menu" class="hidden border-t border-white/10 bg-navy-deep lg:hidden" aria-label="Mobile">
+    <ul class="container-grid py-4">
+      {% for item in nav %}
+        <li class="border-b border-white/10 last:border-0">
+          {% if item.children %}
+            <details class="group">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white">
+                {{ item.title }} {{ icon("chevron-down", "size-5 transition-transform group-open:rotate-180") }}
+              </summary>
+              <ul class="pb-3 pl-4">
+                {% for child in item.children %}
+                  <li><a href="{{ child.url }}" {% if child.external %}target="_blank" rel="noopener"{% endif %} class="block py-2 text-sm {{ 'text-blush' if child.url == page.url else 'text-white/80' }} hover:text-blush">{{ child.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </details>
+          {% else %}
+            <a href="{{ item.url }}" class="block py-3 text-sm font-semibold uppercase tracking-[0.15em] {{ 'text-blush' if item.url == page.url else 'text-white' }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+      <li class="pt-4">
+        <a href="{{ site.phoneHref }}" class="flex items-center gap-3 text-white">{{ icon("phone", "size-5 text-blush") }} {{ site.phone }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>

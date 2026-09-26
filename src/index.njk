@@ -1,0 +1,146 @@
+---
+layout: layouts/base.njk
+permalink: /
+hero:
+  - image: 8L2A842672104-1.jpg
+    position: center bottom
+    text: Client Focused
+  - image: 8L2A8802448136-1.jpg
+    position: center
+    text: Aesthetics Expertise
+  - image: corinne-kutz-tMI2_-r5Nfo-unsplash-1.jpg
+    position: center top
+    text: Cloud Based<br>Accountancy
+features:
+  - icon: about-us-icon.png
+    title: About us
+    text: The Aesthetics Accountant team are experts in this field.
+    url: /about-us/
+  - icon: bulb-icon.png
+    title: What makes us different
+    text: We are more than just number crunchers.
+    url: /what-makes-us-different/
+  - icon: cogs-icon.png
+    title: Value added services
+    text: Digital innovations in accountancy.
+    url: /value-added-services/
+  - icon: user-icon.png
+    title: Meet our founder
+    text: The Aesthetics Accountant founder, Samantha Senior.
+    url: /meet-our-founder/
+partners:
+  - name: Sage
+    url: https://www.sage.com/
+    logo: Logo_bright_green_RGB_2015_22014_Small.png
+  - name: Starling Bank
+    url: https://www.starlingbank.com/business-account/?site_id=accounting_partners&creative_id=SAS_Senior_Accounting_Services
+    logo: StarlingBank_Partner-Logo_Small-1.png
+  - name: FreeAgent
+    url: https://www.freeagent.com/accountants/invite/senioraccountingservices1/
+    logo: freeagent-partner-badge_Small.png
+  - name: Xero
+    url: https://www.xero.com/
+    logo: Logo-Blue_Small-1.png
+---
+{% from "partials/icons.njk" import icon %}
+
+{# Hero slideshow #}
+<section class="relative h-[70vh] min-h-[420px] max-h-[680px] overflow-hidden bg-navy" data-slider aria-roledescription="carousel" aria-label="Highlights">
+  {% for slide in hero %}
+    <div class="absolute inset-0 transition-opacity duration-1000 {{ 'opacity-100' if loop.first else 'opacity-0' }}" data-slide aria-hidden="{{ 'false' if loop.first else 'true' }}">
+      <img src="/assets/images/{{ slide.image }}" alt="" width="1920" height="680" class="absolute inset-0 size-full object-cover" style="object-position: {{ slide.position }}" {% if not loop.first %}loading="lazy"{% endif %}>
+      <div class="absolute inset-0 bg-navy-deep/25"></div>
+      <div class="relative flex h-full items-center justify-center px-4">
+        <p class="hero-text text-center font-serif text-6xl leading-none text-white sm:text-8xl lg:text-[137px]">{{ slide.text | safe }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="absolute inset-x-0 bottom-6 flex justify-center gap-3">
+    {% for slide in hero %}
+      <button type="button" class="size-3 rounded-full border border-white transition-colors {{ 'bg-blush border-blush' if loop.first }}" data-slide-dot aria-label="Show slide {{ loop.index }}"></button>
+    {% endfor %}
+  </div>
+</section>
+
+{# Intro #}
+<section class="py-20 md:py-24">
+  <div class="container-grid">
+    <div class="mx-auto max-w-3xl space-y-5 text-center">
+      <p class="first-letter:mr-0.5 first-letter:font-serif first-letter:text-6xl first-letter:leading-none first-letter:text-navy">The Aesthetics Accountant™ understands the ins and outs of the medical aesthetics industry: the challenges, the much-needed solutions and the exciting possibilities. It’s a unique market, which is why we are here to provide a bespoke service for all aesthetic businesses – no matter how big or small.</p>
+      <p>As accountants, we believe our values align with those in aesthetic roles: our work brings out the best in others and makes them feel good about themselves. We are the only specialist in this field offering the full business advisory service with our bespoke accountancy training. We look forward to the responsibility and opportunity that lies ahead.</p>
+      <p>Follow us on social media for the latest financial news, and how this may affect your business, announcements on our services and brand-new website; as well as industry leading tips on how to get the most out of your money.</p>
+      <p>We can’t wait to share our journey with you, and do our best to help you with yours.</p>
+    </div>
+    {% set images = ["8L2A8797443132-scaled-640x920.jpg", "8L2A8836482144-scaled-640x920.jpg"] %}
+    {% include "partials/quote-images.njk" %}
+  </div>
+</section>
+
+{# Feature strip #}
+<section class="bg-navy py-20 md:py-24">
+  <div class="container-grid grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+    {% for f in features %}
+      <a href="{{ f.url }}" class="group text-center">
+        <img src="/assets/images/{{ f.icon }}" alt="" width="42" height="42" class="mx-auto mb-6 transition-transform group-hover:-translate-y-1">
+        <h4 class="mb-3 text-3xl text-white group-hover:text-blush">{{ f.title }}</h4>
+        <p class="text-white/70">{{ f.text }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# Testimonials #}
+<section class="bg-mist bg-cover bg-center py-20 md:py-28" style="background-image: url('/assets/images/h2-img-5.jpg')">
+  <div class="container-grid">
+    <h2 class="mb-14 text-center text-4xl md:text-[55px] md:leading-tight">What Our Clients Say</h2>
+    <div class="grid items-center gap-10 lg:grid-cols-2">
+      <img src="/assets/images/8L2A8863509149-scaled-480x320.jpg" alt="" width="480" height="320" loading="lazy" class="hidden w-full lg:block">
+      <div class="relative bg-white p-8 shadow-xl md:p-12" data-testimonials>
+        <span class="absolute -top-6 left-8 font-serif text-[120px] leading-none text-blush" aria-hidden="true">“</span>
+        <div class="flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" data-track>
+          {% for t in testimonials %}
+            <figure class="w-full shrink-0 snap-start">
+              <blockquote class="text-[15px] leading-7">{{ t.quote }}</blockquote>
+              <figcaption class="mt-6 flex items-center gap-4">
+                <img src="/assets/images/{{ t.image }}" alt="" width="60" height="60" loading="lazy" class="size-14 rounded-full object-cover">
+                <span class="font-serif text-2xl text-ink">{{ t.name }}</span>
+              </figcaption>
+            </figure>
+          {% endfor %}
+        </div>
+        <div class="mt-8 flex items-center gap-4">
+          <button type="button" class="flex size-10 items-center justify-center border border-blush text-navy transition-colors hover:bg-blush hover:text-white" data-prev aria-label="Previous testimonial">{{ icon("arrow-left") }}</button>
+          <button type="button" class="flex size-10 items-center justify-center border border-blush text-navy transition-colors hover:bg-blush hover:text-white" data-next aria-label="Next testimonial">{{ icon("arrow-right") }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16">
+  <p class="container-grid text-center font-serif text-3xl italic text-navy md:text-4xl">“Accounting is the language of business”</p>
+</section>
+
+{# Parallax CTA #}
+<section class="bg-cover bg-[position:70%_center] py-28 md:py-40" style="background-image: url('/assets/images/8L2A8462108106-2.jpg')">
+  <div class="container-grid">
+    <h2 class="mb-10 text-5xl leading-tight text-navy-deep [text-shadow:1px_1px_#fff] md:text-[55px]">Committed to Helping<br>Our Clients Succeed</h2>
+    <a href="/contact-us/" class="btn-white">Book a consultation</a>
+  </div>
+</section>
+
+{# Partners #}
+<section class="py-20 md:py-24">
+  <div class="container-grid">
+    <h2 class="mb-12 text-center text-4xl md:text-[55px] md:leading-tight">Our Partners</h2>
+    <ul class="grid grid-cols-2 items-center gap-10 md:grid-cols-4">
+      {% for p in partners %}
+        <li>
+          <a href="{{ p.url }}" target="_blank" rel="noopener" class="block">
+            <img src="/assets/images/{{ p.logo }}" alt="{{ p.name }}" loading="lazy" class="mx-auto max-h-20 w-auto opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0">
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

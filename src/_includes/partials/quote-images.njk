@@ -1,0 +1,10 @@
+{# Two portrait images with brand quotes – expects `images` = [left, right] #}
+{% set quotes = ["Know your numbers", "Unbeatable combination of success"] %}
+<div class="mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-2">
+  {% for img in images %}
+    <figure class="{{ 'sm:mt-16' if loop.index == 2 }}">
+      <img src="/assets/images/{{ img }}" alt="" width="640" height="920" loading="lazy" class="aspect-[16/23] w-full object-cover">
+      <figcaption class="mt-4 text-center font-serif text-2xl italic text-navy">“{{ quotes[loop.index0] }}”</figcaption>
+    </figure>
+  {% endfor %}
+</div>

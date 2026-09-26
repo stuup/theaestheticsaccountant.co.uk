@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+---
+{# Standard inner page: title bar + breadcrumb, copy, image pair, consultation CTA #}
+<section class="bg-blush-light">
+  <div class="container-grid flex flex-col gap-1 py-8 sm:flex-row sm:items-center sm:justify-between">
+    <h1 class="text-3xl md:text-4xl">{{ title }}</h1>
+    <nav aria-label="Breadcrumb" class="text-sm">
+      <a href="/" class="text-body hover:text-gold-dark">Home</a>
+      <span class="mx-2 text-blush">/</span>
+      <span class="text-navy">{{ title }}</span>
+    </nav>
+  </div>
+</section>
+
+<section class="py-16 md:py-24">
+  <div class="container-grid">
+    <div class="prose-aa mx-auto {{ 'max-w-3xl text-center' if align == 'center' else 'max-w-3xl' }}">
+      {{ content | safe }}
+    </div>
+
+    {% if images %}
+      {% include "partials/quote-images.njk" %}
+    {% endif %}
+
+    {% include "partials/cta.njk" %}
+  </div>
+</section>

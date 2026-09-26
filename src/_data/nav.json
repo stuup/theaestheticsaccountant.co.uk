@@ -1,0 +1,31 @@
+[
+  { "title": "Home", "url": "/" },
+  {
+    "title": "About",
+    "children": [
+      { "title": "About Us", "url": "/about-us/" },
+      { "title": "What makes us different?", "url": "/what-makes-us-different/" },
+      { "title": "Value Added Services", "url": "/value-added-services/" },
+      { "title": "Meet our Founder", "url": "/meet-our-founder/" }
+    ]
+  },
+  {
+    "title": "Services",
+    "children": [
+      { "title": "Traditional Accountancy Services", "url": "/traditional-accountancy-services/" },
+      { "title": "The Aesthetics Accountant’s Way", "url": "/the-aesthetics-accountants-way/" },
+      { "title": "Aesthetics Accounting Academy", "url": "/aesthetics-accounting-academy/" },
+      { "title": "Fee Protection", "url": "/fee-protection/" },
+      { "title": "New Business", "url": "/new-business/" }
+    ]
+  },
+  {
+    "title": "More",
+    "children": [
+      { "title": "Resources", "url": "/resources/" },
+      { "title": "Contact", "url": "/contact-us/" },
+      { "title": "News & Views", "url": "https://linktr.ee/TheAestheticsAccountant", "external": true },
+      { "title": "Book a Consultation", "url": "https://calendly.com/the_aesthetics_accountant", "external": true }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+---
+title: Resources
+images: [pexels-karolina-grabowska-4491454-scaled-640x920.jpg, pexels-pixabay-209224-scaled-640x920.jpg]
+packages:
+  - name: Basic Pack
+    url: https://app.practiceignition.com/public/jjPmjhrndA85Aru6G1w5zw
+  - name: Addon 001
+    url: https://app.practiceignition.com/public/iszXL-oo4LXQ6pNno1yadg
+  - name: Building Blocks for success
+    url: https://app.practiceignition.com/public/JQrjwFV1d6MUebPvTVkzvg
+---
+<div class="not-prose grid gap-6 sm:grid-cols-3">
+  {% for pkg in packages %}
+    <div class="flex flex-col items-center justify-between gap-8 border border-blush bg-white px-6 py-10 text-center shadow-sm transition-shadow hover:shadow-lg">
+      <h2 class="text-3xl leading-tight">{{ pkg.name }}</h2>
+      <a href="{{ pkg.url }}" target="_blank" rel="noopener" class="btn-navy px-6">Choose Package</a>
+    </div>
+  {% endfor %}
+</div>
