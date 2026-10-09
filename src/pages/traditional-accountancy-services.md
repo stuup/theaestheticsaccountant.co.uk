@@ -1,5 +1,7 @@
 ---
 title: Traditional Accountancy Services
+seoTitle: "Accounting & Tax Services for Aesthetics Clinics"
+description: "Bookkeeping, VAT, payroll and self assessment or corporation tax returns for aesthetics clinics and practitioners, from accountants who know the industry."
 images: [pexels-karolina-grabowska-4491454-scaled-640x920.jpg, pexels-pixabay-209224-scaled-640x920.jpg]
 ---
 We provide the full range of accountancy and tax services in unity with our sister company [SAS Senior Accounting Services](https://senior-accounting-services.co.uk/).

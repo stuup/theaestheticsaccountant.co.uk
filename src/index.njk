@@ -48,7 +48,7 @@ partners:
 <section class="relative h-[70vh] min-h-[420px] max-h-[680px] overflow-hidden bg-navy" data-slider aria-roledescription="carousel" aria-label="Highlights">
   {% for slide in hero %}
     <div class="absolute inset-0 transition-opacity duration-1000 {{ 'opacity-100' if loop.first else 'opacity-0' }}" data-slide aria-hidden="{{ 'false' if loop.first else 'true' }}">
-      <img src="/assets/images/{{ slide.image }}" alt="" width="1920" height="680" class="absolute inset-0 size-full object-cover" style="object-position: {{ slide.position }}" {% if not loop.first %}loading="lazy"{% endif %}>
+      <img src="/assets/images/{{ slide.image }}" alt="" eleventy:widths="768,1280,1920" sizes="100vw" class="absolute inset-0 size-full object-cover" style="object-position: {{ slide.position }}" {% if loop.first %}loading="eager" fetchpriority="high"{% endif %}>
       <div class="absolute inset-0 bg-navy-deep/25"></div>
       <div class="relative flex h-full items-center justify-center px-4">
         <p class="hero-text text-center font-serif text-6xl leading-none text-white sm:text-8xl lg:text-[137px]">{{ slide.text | safe }}</p>
@@ -65,6 +65,7 @@ partners:
 {# Intro #}
 <section class="py-20 md:py-24">
   <div class="container-grid">
+    <h1 class="mx-auto mb-10 max-w-4xl text-center text-4xl md:text-[55px] md:leading-tight">Specialist Accountants for the Medical Aesthetics Industry</h1>
     <div class="mx-auto max-w-3xl space-y-5 text-center">
       <p class="first-letter:mr-0.5 first-letter:font-serif first-letter:text-6xl first-letter:leading-none first-letter:text-navy">The Aesthetics Accountant™ understands the ins and outs of the medical aesthetics industry: the challenges, the much-needed solutions and the exciting possibilities. It’s a unique market, which is why we are here to provide a bespoke service for all aesthetic businesses – no matter how big or small.</p>
       <p>As accountants, we believe our values align with those in aesthetic roles: our work brings out the best in others and makes them feel good about themselves. We are the only specialist in this field offering the full business advisory service with our bespoke accountancy training. We look forward to the responsibility and opportunity that lies ahead.</p>
@@ -72,6 +73,7 @@ partners:
       <p>We can’t wait to share our journey with you, and do our best to help you with yours.</p>
     </div>
     {% set images = ["8L2A8797443132-scaled-640x920.jpg", "8L2A8836482144-scaled-640x920.jpg"] %}
+    {% set imageAlts = ["", "Samantha Senior, founder of The Aesthetics Accountant, in the office"] %}
     {% include "partials/quote-images.njk" %}
   </div>
 </section>
@@ -94,7 +96,7 @@ partners:
   <div class="container-grid">
     <h2 class="mb-14 text-center text-4xl md:text-[55px] md:leading-tight">What Our Clients Say</h2>
     <div class="grid items-center gap-10 lg:grid-cols-2">
-      <img src="/assets/images/8L2A8863509149-scaled-480x320.jpg" alt="" width="480" height="320" loading="lazy" class="hidden w-full lg:block">
+      <img src="/assets/images/8L2A8863509149-scaled-480x320.jpg" alt="Samantha Senior working at her laptop" width="480" height="320" loading="lazy" class="hidden w-full lg:block">
       <div class="relative bg-white p-8 shadow-xl md:p-12" data-testimonials>
         <span class="absolute -top-6 left-8 font-serif text-[120px] leading-none text-blush" aria-hidden="true">“</span>
         <div class="flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" data-track>

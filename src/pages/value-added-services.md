@@ -1,5 +1,7 @@
 ---
 title: Value Added Services
+seoTitle: "Tax Planning for Aesthetics Clinics"
+description: "Year-round tax planning, strategic advice and cloud accounting for medical aesthetics businesses, so directors are never caught out at year end."
 align: center
 images: [pexels-anna-shvets-3987020-scaled-640x920.jpg, pexels-anna-shvets-3986993-scaled-640x920.jpg]
 ---

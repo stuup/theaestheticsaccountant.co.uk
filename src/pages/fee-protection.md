@@ -1,5 +1,7 @@
 ---
 title: Fee Protection
+seoTitle: "Fee Protection & Tax Investigation Insurance"
+description: "Insurance-backed tax investigation cover for aesthetics businesses, with £100,000 fee indemnity and expert representation if HMRC opens an enquiry."
 images: [pexels-adrianna-calvo-17679-scaled-640x920.jpg, pexels-flickr-157203-640x920.jpg]
 ---
 ## Are you protected if HMRC opens a costly investigation into your personal or business affairs?

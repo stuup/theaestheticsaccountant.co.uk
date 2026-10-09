@@ -1,5 +1,7 @@
 ---
 title: What makes us different?
+seoTitle: "Accountants for Aesthetics Businesses"
+description: "More than number crunchers: we combine year-end accounts with monthly management accounting so aesthetics clinics can make decisions and save money all year."
 images: [pexels-cottonbro-4065877-scaled-640x920.jpg, pexels-cottonbro-4065876-scaled-640x920.jpg]
 ---
 ## We are more than just number crunchers

@@ -1,7 +1,7 @@
 {
   "name": "The Aesthetics Accountant",
   "url": "https://www.theaestheticsaccountant.co.uk",
-  "tagline": "Experts in accounting for the Aesthetics industry",
+  "tagline": "Specialist Accountants for Aesthetics Clinics",
   "description": "The Aesthetics Accountant™ provides bespoke accountancy, tax and business advisory services for medical aesthetics businesses – no matter how big or small.",
   "hours": "9:00 - 17:00",
   "hoursLabel": "Our Opening Hours Mon. - Fri.",
@@ -14,11 +14,19 @@
     "F14 – The Aesthetics Accountant, RaisE, Tom Pudding Way,",
     "Goole, East Riding of Yorkshire, DN14 6BS"
   ],
+  "postalAddress": {
+    "streetAddress": "F14, RaisE, Tom Pudding Way",
+    "addressLocality": "Goole",
+    "addressRegion": "East Riding of Yorkshire",
+    "postalCode": "DN14 6BS",
+    "addressCountry": "GB"
+  },
   "booking": "https://calendly.com/the_aesthetics_accountant",
   "newsletter": "https://mailchi.mp/08e97f5e7032/theaestheticsaccountant",
   "social": {
     "instagram": "https://www.instagram.com/the_aesthetics_accountant/",
     "facebook": "https://www.facebook.com/The-Aesthetics-Accountant-TM-106471737914777"
   },
-  "about": "The Aesthetics Accountant™ team are experts in this field with a demonstrative client list and sound understanding of the bespoke accountancy practices required to underpin this sector."
+  "about": "The Aesthetics Accountant™ team are experts in this field with a demonstrative client list and sound understanding of the bespoke accountancy practices required to underpin this sector.",
+  "founder": "Samantha Senior"
 }

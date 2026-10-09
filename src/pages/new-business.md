@@ -1,5 +1,7 @@
 ---
 title: New Business
+seoTitle: "Starting an Aesthetics Business"
+description: "Starting an aesthetics business? Our start-up packages set up your business bank account, HMRC registration and accounting software, for sole traders and limited companies."
 images: [pexels-anna-shvets-3727512-scaled-640x920.jpg, pexels-rfstudio-3059748-scaled-640x920.jpg]
 ---
 Setting up any new business can be a scary prospect with lots to consider and important decisions to be made.

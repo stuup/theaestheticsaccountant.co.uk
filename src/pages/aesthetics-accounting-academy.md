@@ -1,5 +1,7 @@
 ---
 title: Aesthetics Accounting Academy
+seoTitle: "Tax & Accounting Training for Aesthetics Businesses"
+description: "Courses and guides on tax, VAT, sole trader vs limited company and accounting software for aesthetics practitioners and their teams, in groups, 1-to-1 or as downloads."
 images: [pexels-anna-shvets-3727512-scaled-640x920.jpg, pexels-rfstudio-3059748-scaled-640x920.jpg]
 ---
 <p class="lead">Training Accountancy, Software, and Tax to non-financial managers and staff.</p>

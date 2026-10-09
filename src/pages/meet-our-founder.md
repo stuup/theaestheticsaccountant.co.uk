@@ -1,5 +1,7 @@
 ---
 title: Meet our Founder
+seoTitle: "Samantha Senior, Founder"
+description: "Meet Samantha Senior, founder of The Aesthetics Accountant and a specialist in accountancy for the UK medical aesthetics industry."
 images: [pexels-flo-dahm-699459-scaled-640x920.jpg, pexels-julia-khalimova-4042448-scaled-640x920.jpg]
 ---
 <img src="/assets/images/8L2A8462108106-1024x683.jpg" alt="Samantha Senior, founder of The Aesthetics Accountant" width="1024" height="683" class="w-full">

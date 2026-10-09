@@ -1,5 +1,7 @@
 ---
 title: About Us
+seoTitle: "Specialist Aesthetics Accountants"
+description: "Meet the specialist accountants for medical aesthetics clinics and practitioners. Bespoke accounting, tax and advisory support, based in Goole, East Yorkshire."
 align: center
 images: [8L2A8799445133-scaled-640x920.jpg, pexels-pixabay-40568-scaled-640x920.jpg]
 ---

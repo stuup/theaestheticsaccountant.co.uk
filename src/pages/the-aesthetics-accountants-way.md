@@ -1,5 +1,7 @@
 ---
 title: The Aesthetics Accountant’s Way
+seoTitle: "Management Accounts & Cloud Accounting"
+description: "Monthly management accounts, your own part-time financial director and cloud accounting setup, built for medical aesthetics clinics."
 images: [pexels-rfstudio-3825586-scaled-640x920.jpg, pexels-artem-podrez-4492126-1-scaled-640x920.jpg]
 ---
 The services that make us different. What you need in addition to the traditional accounting:
